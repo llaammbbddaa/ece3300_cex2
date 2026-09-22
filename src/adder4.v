@@ -14,12 +14,11 @@ module adder4(
    
 // add your code here -- you must use four instances of the full adder "fulladd", defined below
 
-wire [3:0] c;
+wire [2:0] c;
 fulladd one(a[0], b[0], 0, result[0], c[0]);
 fulladd two(a[1], b[1], c[0], result[1], c[1]);
 fulladd three(a[2], b[2], c[1], result[2], c[2]);
-fulladd four(a[3], b[3], c[2], result[3], c[3]);
-   
+fulladd four(a[3], b[3], c[2], result[3], result[4]);
 endmodule // adder4
 
 module fulladd(
